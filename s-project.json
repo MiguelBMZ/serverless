@@ -2,7 +2,7 @@
   "name": "ejemplo-deploy",
   "custom": {},
   "plugins": [
-    "serverless-serve", 
+    "serverless-serve",
     "serverless-test-plugin"
   ]
 }
