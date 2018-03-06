@@ -12,7 +12,7 @@ do
     lambda_publish="$(aws lambda publish-version --function-name $lambdaaws --description '1' --region 'eu-central-1')"
     export PYTHONIOENCODING=utf8
     lambda_version="$(echo $lambda_publish | /usr/bin/python -c 'import sys, json; print json.load(sys.stdin)["Version"]')"
-    aws lambda update-alias --function-name latasa-${servicio[nombre]} --name "dev" --function-version "2012-10-17"
+    aws lambda update-alias --function-name latasa-${servicio[nombre]} --name "dev" --function-version $lambda_version
     cd $DIR
   else
       echo "change value doDeploy to deploy servicaes"
