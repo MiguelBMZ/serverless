@@ -1,4 +1,3 @@
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 declare -A servicio0=([nombre]='general_prueba' [direccion]='general_prueba/') 
 for id_service in ${!servicio@}; 
 do
@@ -17,48 +16,3 @@ do
       echo "change value doDeploy to deploy servicaes"
   fi
 done
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> 8075a3b08e7f5ad47fd2f7f2efe27eaafa93905e
