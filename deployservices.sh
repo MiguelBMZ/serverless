@@ -3,7 +3,7 @@ declare -A servicio0=([nombre]='general_prueba' [direccion]='general_prueba/')
 for id_service in ${!servicio@}; 
 do
   if $doDeploy ; then
-    declare -n servicio=$id_service
+    ##declare -n servicio=$id_service
     cd ${servicio[direccion]}
     zip -r ${servicio[nombre]}.zip .
     echo "deploy lambda named ${servicio[nombre]}"
