@@ -13,7 +13,6 @@ do
     export PYTHONIOENCODING=utf8
     lambda_version="$(echo $lambda_publish | /usr/bin/python -c 'import sys, json; print json.load(sys.stdin)["Version"]')"
     aws lambda update-alias --function-name ejemplo-deploy-${servicio[nombre]} --name "dev" --function-version $lambda_version
-    cd $DIR
   else
       echo "change value doDeploy to deploy servicaes"
   fi
